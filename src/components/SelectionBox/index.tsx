@@ -1,6 +1,6 @@
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
-const SelectionBox = ({value, onChange, label, rows}: {value: string, onChange: any, label: string, rows : any}) => {  
+const SelectionBox = ({label, value, onChange, rows}: {label: string, value: string, onChange: any, rows : any}) => {  
 
   return (
     <FormControl sx={{ minWidth: 225 }}>

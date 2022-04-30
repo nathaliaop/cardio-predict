@@ -8,7 +8,7 @@ import { Container, Content, TableContainer, Title, TableTitle, TableContent, Bu
 
 const Home = () => {
   const [age, setAge] = useState(0);
-  const [heigth, setHeigth] = useState(0);
+  const [height, setHeight] = useState(0);
   const [weight, setWeight] = useState(0);
   const [gender, setGender] = useState('');
   const [apHi, setApHi] = useState(0);
@@ -45,17 +45,17 @@ const Home = () => {
   }
 
   const rowsObjective = [
-    createRow('Age', <TextField value={age} onChange={(e: any) => setAge(e.target.value)} required id="outlined-basic" type="number" label="years" variant="outlined" />),
-    createRow('Height', <TextField value={heigth} onChange={(e: any) => setHeigth(e.target.value)} required id="outlined-basic" type="number" label="cm" variant="outlined" />),
-    createRow('Weight', <TextField value={weight} onChange={(e: any) => setWeight(e.target.value)} required id="outlined-basic" type="number" label="kg" variant="outlined" />),
-    createRow('Gender', <SelectionBox value={gender} onChange={(e: any) => setGender(e.target.value)} label='gender' rows={rowsGender}></SelectionBox>),
+    createRow('Age', <Input label='years' value={age} onChange={(e: any) => setAge(e.target.value)}/>),
+    createRow('Height', <Input label='cm' value={height} onChange={(e: any) => setHeight(e.target.value)}/>),
+    createRow('Weight', <Input label='kg' value={weight} onChange={(e: any) => setWeight(e.target.value)}/>),
+    createRow('Gender', <SelectionBox label='gender' value={gender} onChange={(e: any) => setGender(e.target.value)} rows={rowsGender}></SelectionBox>),
   ];
   
   const rowsExamination = [
-    createRow('Systolic blood pressure', <Input label="years" value={apHi} onChange={(e: any) => setApHi(e.target.value)}/>),
-    createRow('Diastolic blood pressure', <Input label="years" value={apLo} onChange={(e: any) => setApLo(e.target.value)}/>),
-    createRow('Cholesterol', <SelectionBox value={cholesterol} onChange={setCholesterol} label='level' rows={rowsLevel}></SelectionBox>),
-    createRow('Glucose', <SelectionBox value={glucose} onChange={setGlucose} label='level' rows={rowsLevel}></SelectionBox>),
+    createRow('Systolic blood pressure', <Input label='' value={apHi} onChange={(e: any) => setApHi(e.target.value)}/>),
+    createRow('Diastolic blood pressure', <Input label='' value={apLo} onChange={(e: any) => setApLo(e.target.value)}/>),
+    createRow('Cholesterol', <SelectionBox label='level' value={cholesterol} onChange={setCholesterol} rows={rowsLevel}></SelectionBox>),
+    createRow('Glucose', <SelectionBox label='level' value={glucose} onChange={setGlucose} rows={rowsLevel}></SelectionBox>),
   ];
 
   const rowsSubjective = [
@@ -82,7 +82,7 @@ const Home = () => {
             <TableTitle>Subjective</TableTitle>
             <MainTable title='Subjective' rows={rowsSubjective}></MainTable>
             <ButtonContainer>
-            <Button variant="contained">Calculate</Button>
+            <Button variant='contained'>Calculate</Button>
             </ButtonContainer>
           </TableContent>
         </TableContainer>
