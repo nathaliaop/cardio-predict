@@ -49,7 +49,7 @@ export const TableTitle = styled.div`
   padding: 2rem;
 `;
 
-export const ButtonContainer = styled.div`
+export const Form = styled.form`
   display: flex;
   width: 100%;
   justify-content: flex-end;
