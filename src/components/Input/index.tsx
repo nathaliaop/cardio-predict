@@ -5,9 +5,9 @@ const Input = ({label, value, onChange}: {label: string, value: string | number,
   return (
     <TextField
       required
-      id="outlined-basic"
-      type="number"
-      variant="outlined"
+      id='outlined-basic'
+      type='number'
+      variant='outlined'
       label={label}
       value={value}
       onChange={onChange}
