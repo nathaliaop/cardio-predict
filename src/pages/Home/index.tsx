@@ -94,8 +94,12 @@ const Home = () => {
     return { name, body };
   }
 
+  const handleDate = (date: any) => {
+    setDate(date);
+  }
+
   const rowsObjective = [
-    createRow('Date of Birth', <DateSelector value={date} onChange={(e: any) => setDate(e.target.value)} newDate={newDate}></DateSelector>),
+    createRow('Date of Birth', <DateSelector value={date} onChange={(date: any) => setDate(date)} newDate={newDate}></DateSelector>),
     createRow('Height', <Input label='cm' value={height} onChange={(e: any) => setHeight(e.target.value)} />),
     createRow('Weight', <Input label='kg' value={weight} onChange={(e: any) => setWeight(e.target.value)} />),
     createRow('Gender', <SelectionBox label='gender' value={gender} onChange={(e: any) => setGender(e.target.value)} rows={rowsGender}></SelectionBox>),
