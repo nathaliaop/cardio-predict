@@ -1,7 +1,8 @@
 import axios from 'axios';
+import env from 'react-dotenv';
 
 const api = axios.create({
-    baseURL: process.env.API_URL,
+    baseURL: env.API_URL,
     headers: {
         'Content-Type': 'application/json',
     }
